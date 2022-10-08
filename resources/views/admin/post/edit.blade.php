@@ -2,10 +2,10 @@
 @extends('layouts.master')
 
 @section('content')
-    <div class="container-fluid">
+    <div class="container-fluid mt-4">
         <div class="row">
             <div class="col-12">
-                <div class="card mt-3 bg-hexa">
+                <div class="card ">
                     <div class="card-header">
                         <h3 class="text-center text-light"> Post Create </h3>
                           @include('includes.error')
@@ -26,7 +26,7 @@
                                  <select name="category" id="category" class="form-control">
                                     <option value="" selected disabled> Choose Category </option>
                                        @foreach ($category as $item)
-                                            <option value="{{$item->id}}" @if($post->category_id==$item->id) selected @endif> {{$item->name}} </option>
+                                            <option value="{{$item->id}}" @selected($post->category_id==$item->id)> {{$item->name}} </option>
                                        @endforeach
                                  </select>
                             </div>
@@ -34,7 +34,7 @@
                             <div class="form-group">   
                                 @foreach ($tag as $item)
                                 <label for="tag{{$item->id}}"> <input type="checkbox" value="{{$item->id}}" name="tag[]" id="tag{{$item->id}}" class="m-2 p-1" @foreach ($post->tag as $t)
-                                    @if($item->id==$t->id) checked @endif
+                                    @checked($item->id==$t->id)
                                 @endforeach> {{$item->name}} </label>
                                 @endforeach
                             </div>
@@ -75,13 +75,14 @@
 
 
 
+
 @section('style')
-<link rel="stylesheet" href="{{asset('master')}}/plugin/summernote/summernote-bs4.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.20/summernote-bs4.min.css" integrity="sha512-ngQ4IGzHQ3s/Hh8kMyG4FC74wzitukRMIcTOoKT3EyzFZCILOPF0twiXOQn75eDINUfKBYmzYn2AA8DkAk8veQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 @endsection
 
 
 @section('script')
-<script src="{{asset('master')}}/plugin/summernote/summernote-bs4.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.20/summernote-bs4.min.js" integrity="sha512-ZESy0bnJYbtgTNGlAD+C2hIZCt4jKGF41T5jZnIXy4oP8CQqcrBGWyxNP16z70z/5Xy6TS/nUZ026WmvOcjNIQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script>
     $(function () {
       // Summernote

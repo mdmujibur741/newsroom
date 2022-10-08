@@ -3,10 +3,10 @@
 @extends('layouts.master')
 
 @section('content')
-    <div class="container-fluid">
+    <div class="container-fluid mt-4">
         <div class="row">
             <div class="col-12">
-                <div class="card bg-hexa mt-3">
+                <div class="card ">
                     <div class="card-header">
                         <h3 class="text-center"> Tag Edit </h3>
                           @include('includes.error')

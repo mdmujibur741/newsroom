@@ -2,24 +2,24 @@
 
 @section('content')
 
-            <div class="container-fluid">
+            <div class="container-fluid mt-4">
                 <div class="row">
                      <div class="col-12">
-                         <div class="card bg-hexa">
+                         <div class="card ">
                             <div class="card-header">
-                                  <h3 class="text-center">Category List</h3>
+                                  <h3 class="text-center">Message List</h3>
                             </div>
                             <div class="card-body">
-                                   <table class="table table-bordered text-light">
-                                         <thead>
+                                   <table class="table table-bordered">
+                                         <thead > 
                                               <tr>
-                                                <th scope="col" class="text-light">Serial</th>
-                                                <th scope="col" class="text-light"> Name</th>
-                                                <th scope="col" class="text-light"> Email </th>
-                                                <th scope="col" class="text-light"> Subject</th>
-                                                <th scope="col" class="text-light"> Message</th>
-                                                <th scope="col" class="text-light"> Date</th>
-                                                <th scope="col" class="text-light"> Action</th>
+                                                <th scope="col" >Serial</th>
+                                                <th scope="col" > Name</th>
+                                                <th scope="col" > Email </th>
+                                                <th scope="col" > Subject</th>
+                                                <th scope="col" > Message</th>
+                                                <th scope="col" > Date</th>
+                                                <th scope="col" > Action</th>
                                               </tr>
                                          </thead>
                                          <tbody>
@@ -37,7 +37,7 @@
                                                              <form action="{{route('contact.destroy',$item->id)}}" method="post">
                                                                 @csrf
                                                                 @method('delete')
-                                                                  <button type="submit" class="btn btn-sm btn-danger"><i class="fa-solid fa-trash"></i></button>
+                                                                  <button type="submit" class="btn btn-sm btn-danger" onclick="return confirm('Are you sure you want to delete this item?');"><i class="fa-solid fa-trash"></i></button>
                                                              </form>
                                                         </td>
                                                       </tr>

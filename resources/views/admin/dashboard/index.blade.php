@@ -3,7 +3,7 @@
   @section('content')
      
  
-       <div class="cotainer-fluid">
+       <div class="cotainer-fluid mt-4">
           <div class="row justify-content-center">
 
                 <div class="col-3">
@@ -29,7 +29,7 @@
                 </div>
 
                 <div class="col-3">
-                  <div class="card">
+                  <div class="card" >
                     <div class="card-body">
                       <div class="row">
                         <div class="col-9">
@@ -73,7 +73,7 @@
                 </div>
 
                 <div class="col-3">
-                  <div class="card">
+                  <div class="card" >
                     <div class="card-body">
                       <div class="row">
                         <div class="col-9">
@@ -98,15 +98,15 @@
           </div>
        </div>
 
-       <div class="container-fluid mt-5">
+       <div class="container-fluid mt-3">
         <div class="row">
              <div class="col-12">
                  <div class="card bg-hexa">
                     <div class="card-header">
-                          <h3 class="text-center text-light">Post List</h3>
+                          <h3 class="text-center">Post List</h3>
                     </div>
                     <div class="card-body">
-                           <table class="table table-bordered text-light">
+                           <table class="table table-bordered">
                                  <thead>
                                       <tr>
                                         <th scope="col">Serial</th>
@@ -136,7 +136,7 @@
                                                      <form action="{{route('post.destroy',$item->id)}}" method="post">
                                                         @csrf
                                                         @method('delete')
-                                                          <button type="submit" class="btn btn-sm btn-danger"><i class="fa-solid fa-trash"></i></button>
+                                                          <button type="submit" class="btn btn-sm btn-danger" onclick="return confirm('Are you sure you want to delete this item?');"><i class="fa-solid fa-trash"></i></button>
                                                      </form>
                                                 </td>
                                               </tr>

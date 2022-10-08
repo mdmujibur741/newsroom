@@ -1,32 +1,33 @@
-
-
 @include('layouts.partial.html_head')
+<body class="hold-transition sidebar-mini">
+<div class="wrapper">
+  <!-- Navbar -->
+  @include('layouts.partial.topnav')
+  <!-- /.navbar -->
 
+  <!-- Main Sidebar Container -->
+    @include('layouts.partial.sidenav')
 
-    <div class="container-scroller">
-      <!-- partial:partials/_sidebar.html -->
-       @include('layouts.partial.sidenav')
-      <!-- partial -->
-      <div class="container-fluid page-body-wrapper">
-        <!-- partial:partials/_navbar.html -->
-         @include('layouts.partial.topnav')
-        <!-- partial -->
-        <div class="main-panel">
-          <div class="content-wrapper" style="background: #408EC4 !important">
-            
-            
-                @yield('content')
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    
 
-             
-          </div>
-          <!-- content-wrapper ends -->
+    <!-- Main content -->
+    <div class="content">
+      <div class="container-fluid">
+               
+        @yield('content')
         
-        
-          <!-- partial -->
-        </div>
-        <!-- main-panel ends -->
       </div>
-      <!-- page-body-wrapper ends -->
+      <!-- /.container-fluid -->
     </div>
-    @include('sweetalert::alert')
-    @include('layouts.partial.script')
+    <!-- /.content -->
+  </div>
+  <!-- /.content-wrapper -->
+
+
+
+  
+</div>
+<!-- ./wrapper -->
+@include('layouts.partial.script')

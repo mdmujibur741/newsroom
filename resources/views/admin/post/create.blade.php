@@ -2,10 +2,10 @@
 @extends('layouts.master')
 
 @section('content')
-    <div class="container-fluid">
+    <div class="container-fluid mt-4">
         <div class="row">
             <div class="col-12">
-                <div class="card mt-3 bg-hexa">
+                <div class="card">
                     <div class="card-header">
                         <h3 class="text-center"> Post Create </h3>
                           @include('includes.error')
@@ -71,12 +71,12 @@
 
 
 @section('style')
-<link rel="stylesheet" href="{{asset('master')}}/plugin/summernote/summernote-bs4.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.20/summernote-bs4.min.css" integrity="sha512-ngQ4IGzHQ3s/Hh8kMyG4FC74wzitukRMIcTOoKT3EyzFZCILOPF0twiXOQn75eDINUfKBYmzYn2AA8DkAk8veQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 @endsection
 
 
 @section('script')
-<script src="{{asset('master')}}/plugin/summernote/summernote-bs4.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.20/summernote-bs4.min.js" integrity="sha512-ZESy0bnJYbtgTNGlAD+C2hIZCt4jKGF41T5jZnIXy4oP8CQqcrBGWyxNP16z70z/5Xy6TS/nUZ026WmvOcjNIQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script>
     $(function () {
       // Summernote

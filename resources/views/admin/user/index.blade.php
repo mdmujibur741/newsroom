@@ -2,15 +2,15 @@
 
 @section('content')
 
-    <div class="container-fluid">
+    <div class="container-fluid mt-4">
         <div class="row">
             <div class="col-12">
-                <div class="card bg-hexa">
+                <div class="card">
                     <div class="card-header">
                         <h3 class="text-center">User List</h3>
                     </div>
                     <div class="card-body">
-                        <table class="table table-bordered text-light">
+                        <table class="table table-bordered">
                             <thead>
                                 <tr>
                                     <th scope="col">Serial</th>
@@ -35,7 +35,7 @@
                                                 <form action="{{ route('user.destroy', $item->id) }}" method="post">
                                                     @csrf
                                                     @method('delete')
-                                                    <button type="submit" class="btn btn-sm btn-danger"><i
+                                                    <button type="submit" onclick="return confirm('Are you sure you want to delete this item?');" class="btn btn-sm btn-danger"><i
                                                             class="fa-solid fa-trash"></i></button>
                                                 </form>
                                             </td>
