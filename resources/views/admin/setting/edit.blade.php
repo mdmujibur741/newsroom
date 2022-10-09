@@ -72,7 +72,7 @@
                               </div>
 
                               @if($setting ==!null)
-                              <img src="{{asset($setting->image)}}" width="30%" class="img-thumbnail float-end" alt="" srcset="">
+                              <img src="{{asset($setting->image)}}" width="30%" class="img-thumbnail float-right" alt="" srcset="">
                                @endif
 
                             <button type="submit" class="btn btn-primary mr-2"> Submit </button>

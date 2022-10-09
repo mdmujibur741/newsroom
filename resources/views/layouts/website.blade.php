@@ -194,9 +194,7 @@
     <script src="{{asset('website')}}/lib/easing/easing.min.js"></script>
     <script src="{{asset('website')}}/lib/owlcarousel/owl.carousel.min.js"></script>
 
-    <!-- Contact Javascript File -->
-    <script src="{{asset('website')}}/mail/jqBootstrapValidation.min.js"></script>
-    <script src="{{asset('website')}}/mail/contact.js"></script>
+
 
     <!-- Template Javascript -->
     <script src="{{asset('website')}}/js/main.js"></script>
